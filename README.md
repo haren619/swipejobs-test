@@ -13,11 +13,11 @@ http://localhost:8080/matcher/{workerId}
 
 {workerId} -> worker id needs to be matched with jobs
 
-** Refer matcher-api/target/site/jacoco/index.html for code coverage.
+** Refer ../target/site/jacoco/index.html for code coverage.
 
 ## Design
 
-Matcher application will take a workerId and return three appropriate jobs with the highest score using the data retrieved by SwipeJob's workers and jobs apis.
+Matcher application will take a workerId and return three appropriate jobs with the highest score using the data retrieved from SwipeJob's workers and jobs apis.
 
 In this solution application uses a basic Rule Engine design pattern. MatchingEngine calculates the matching score for each job against the given worker. MatchingService will then sort the jobs by their score and return 3 jobs with the highest score.
 
